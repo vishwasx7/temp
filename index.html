@@ -12,43 +12,57 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #121212; /* Dark background */
-            color: #ffffff; /* White text */
+            background: linear-gradient(to right, #ff9800, #ff5722);
+            color: #ffffff;
             font-family: Arial, sans-serif;
             text-align: center;
+            overflow: hidden;
         }
         h1 {
             font-size: 3em;
-            color: #ff9800; /* Amber color */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+            animation: glow 1.5s infinite alternate;
         }
         h2 {
             font-size: 2em;
-            color: #ffffff; /* White text */
             margin: 10px 0;
         }
         .graphics {
-            font-size: 4em; /* Larger size for emojis */
+            font-size: 4em;
             margin: 20px 0;
+            animation: bounce 1s infinite;
         }
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2em; /* Smaller font size for mobile */
-            }
-            h2 {
-                font-size: 1.5em; /* Smaller font size for mobile */
-            }
-            .graphics {
-                font-size: 3em; /* Smaller size for emojis on mobile */
-            }
+        @keyframes glow {
+            0% { text-shadow: 4px 4px 10px rgba(255, 255, 255, 0.5); }
+            100% { text-shadow: 4px 4px 20px rgba(255, 255, 255, 1); }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .balloons {
+            position: absolute;
+            bottom: -100px;
+            font-size: 3em;
+            animation: float 5s infinite ease-in-out;
+        }
+        @keyframes float {
+            0% { transform: translateY(100vh); }
+            100% { transform: translateY(-50px); }
         }
     </style>
 </head>
 <body>
-    <h1>Happy Birthday VIPIN!</h1>
-    <h2>Bro!</h2>
+    <h1>🎂 Happy Birthday VIPIN BRO! 🎂</h1>
+    <h2>Bro, Have an Amazing Day! 🎉🥳</h2>
     <div class="graphics">
-        🎉🎂🥳🎈🎊
+        🎈🎊🎁🎂🎇
     </div>
+    <div class="balloons" style="left: 10%; animation-delay: 1s;">🎈</div>
+    <div class="balloons" style="left: 30%; animation-delay: 2s;">🎈</div>
+    <div class="balloons" style="left: 50%; animation-delay: 3s;">🎈</div>
+    <div class="balloons" style="left: 70%; animation-delay: 4s;">🎈</div>
+    <div class="balloons" style="left: 90%; animation-delay: 5s;">🎈</div>
 </body>
 </html>
