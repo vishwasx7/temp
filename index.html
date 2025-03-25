@@ -7,6 +7,7 @@
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -14,21 +15,40 @@
             background-color: #121212; /* Dark background */
             color: #ffffff; /* White text */
             font-family: Arial, sans-serif;
+            text-align: center;
         }
         h1 {
             font-size: 3em;
             color: #ff9800; /* Amber color */
-            text-align: center;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        h2 {
+            font-size: 2em;
+            color: #ffffff; /* White text */
+            margin: 10px 0;
+        }
+        .graphics {
+            font-size: 4em; /* Larger size for emojis */
+            margin: 20px 0;
         }
         @media (max-width: 600px) {
             h1 {
                 font-size: 2em; /* Smaller font size for mobile */
+            }
+            h2 {
+                font-size: 1.5em; /* Smaller font size for mobile */
+            }
+            .graphics {
+                font-size: 3em; /* Smaller size for emojis on mobile */
             }
         }
     </style>
 </head>
 <body>
     <h1>Happy Birthday VIPIN!</h1>
+    <h2>Bro!</h2>
+    <div class="graphics">
+        🎉🎂🥳🎈🎊
+    </div>
 </body>
 </html>
